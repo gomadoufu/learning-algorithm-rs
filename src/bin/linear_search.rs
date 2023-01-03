@@ -1,20 +1,16 @@
 use proconio::input;
-pub fn linear_search() {
-    input! {
-        N: usize,
-        v: isize,
-    }
-
+fn main() {
     //入力を受け取る
-    let mut a = Vec::<isize>::with_capacity(N);
+    input! {
+        n: usize,
+        v: isize,
+        a: [isize; n],
+    }
 
     //線形探索
     let mut exist = false;
-    for i in 0..N {
-        input! {
-            a: isize,
-        }
-        if a == v {
+    for i in a {
+        if i == v {
             exist = true;
         }
     }
